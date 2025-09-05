@@ -8,8 +8,6 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import Image from "next/image";
 
-
-
 import { MdPhoneAndroid } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross2 } from "react-icons/rx";
@@ -45,7 +43,8 @@ const Navbar = () => {
 
             <div>
               <Link
-                href="/services"
+                // prevent route to service
+                href="/"
                 className="relative font-bold text-center cursor-pointer hover:text-[#89c468] 
                after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] 
                after:bg-[#89c468] after:w-0 after:transition-all after:duration-300 hover:after:w-full">
@@ -54,7 +53,7 @@ const Navbar = () => {
             </div>
             <div>
               <Link
-                href="/about"
+                href="/"
                 className="relative font-bold text-center cursor-pointer hover:text-[#89c468] 
                after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] 
                after:bg-[#89c468] after:w-0 after:transition-all after:duration-300 hover:after:w-full">
@@ -125,14 +124,14 @@ const Navbar = () => {
 
               <div className="flex w-full border-b border-[#CCCCCC] pb-2">
                 <Link
-                  href="/services"
+                  href="/"
                   className="text-white hover:text-[#89c468] m-auto">
                   Services
                 </Link>
               </div>
               <div className="flex w-full border-b border-[#CCCCCC]  pb-2">
                 <Link
-                  href="/about"
+                  href="/"
                   className="text-white hover:text-[#89c468] m-auto">
                   About
                 </Link>
