@@ -8,6 +8,8 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import Image from "next/image";
 
+
+
 import { MdPhoneAndroid } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross2 } from "react-icons/rx";
