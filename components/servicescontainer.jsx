@@ -21,36 +21,42 @@ const services = [
     description:
       "A Technical Feasibility Study assesses the technical, financial, and regulatory viability of solar and BESS projects to optimize design, maximize yield, and mitigate risks.",
     image: "/images/technicalfeasibility.jpg",
+    path: "/services/technicalfeasibilitystudy",
   },
   {
     title: "Solar PV Design",
     description:
       "We provide optimized, standards-compliant solar PV system layouts and detailed electrical designs, from small to large-scale projects, using advanced industry software and tools.",
     image: "/images/solardesign.jpg",
+    path: "/services/solarpvdesign",
   },
   {
     title: "Energy Yield Assessment",
     description:
       "We deliver accurate, simulation-based energy yield analyses (P50/P90), shading studies, and system optimization to help clients evaluate, design, and maximize the performance of their solar projects.",
     image: "/images/energyyieldassessment.jpg",
+    path: "/services/energyyieldassessment",
   },
   {
     title: "Battery Layout Design",
     description:
       "We provide optimized Battery Energy Storage System (BESS) layout designs for standalone, hybrid, or co-located projects, ensuring safety, reliability, and efficient integration with renewable energy systems.",
     image: "/images/batterylayout.jpg",
+    path: "/services/batterylayoutdesign",
   },
   {
     title: "Due Diligence Study",
     description:
       "We deliver independent due diligence studies for solar PV and BESS projects, assessing financial, technical, legal, and regulatory aspects to identify risks, validate performance, and ensure informed investment decisions.",
     image: "/images/duedeligence.jpg",
+    path: "/services/duediligencestudy",
   },
   {
     title: "DNO Grid Connection Advisory Service",
     description:
       "We deliver independent due diligence studies for solar PV and BESS projects, assessing financial, technical, legal, and regulatory aspects to identify risks, validate performance, and ensure informed investment decisions.",
     image: "/images/solarfarm.png",
+    path: "/services/dnogridconnectionadvisoryservice",
   },
 ];
 
@@ -153,7 +159,10 @@ const ServicesContainer = () => {
         <Stats />
         {/* end of the stat */}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-10 mt-8 mx-auto max-w-6xl w-full">
+        {/* BEGINNING OF SERVICES CONTAINER */}
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-10 mt-8 mx-auto max-w-6xl w-full"
+          id="service">
           {services.map((service, idx) => (
             <motion.div
               key={idx}
@@ -179,13 +188,16 @@ const ServicesContainer = () => {
                 </h1>
                 <p className="text-white">{service.description}</p>
                 <div className="flex items-center text-white hover:text-[#89c468] transition-colors duration-500 cursor-pointer">
-                  <h1 className="mr-2">Find out more</h1>
-                  <FaArrowRight />
+                  <Link href={service.path} className="flex items-center">
+                    <h1 className="mr-2">Find out more</h1>
+                    <FaArrowRight />
+                  </Link>
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
+        {/*END OF SERVICES CONTAINER */}
       </div>
 
       {/* to add the what we offer section in a white backgound */}

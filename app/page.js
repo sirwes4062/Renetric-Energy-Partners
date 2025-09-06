@@ -3,6 +3,7 @@
 import Link from "next/link";
 
 import { motion } from "framer-motion";
+
 import { Typewriter } from "react-simple-typewriter";
 
 import { IoIosArrowDropdownCircle } from "react-icons/io";
